@@ -1,0 +1,133 @@
+ 
+<style type="text/css">
+	* { padding:0; margin:0; }
+	#test { background:#aaa; height:100%; width:100%; }
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		var height = getViewportHeight();
+		if(height > 0)
+			document.getElementById("screen-filler").style.height = height + "px";
+	}
+
+	$(document).ready(function() { 
+		$(".navbar").fadeTo(4000,1); 
+
+		$(".fade1").delay(200).fadeTo(2000,1); 
+		$(".fade2").delay(800).fadeTo(2000,1); 
+		$(".fade3").delay(1400).fadeTo(2000,1); 
+
+		$(".lol").mouseenter(function(){
+			$(".lol2").slideToggle("slow");
+		});
+		$(".lol").mouseout(function(){
+			$(".lol2").slideToggle("slow");
+		});
+		
+	});
+
+	$('.btn').click(function(){
+		scrollToAnchor(about_me);
+		return false;
+	});
+
+	function getViewportHeight() {
+		var h = 0;
+		if(self.innerHeight)
+			h = window.innerHeight;
+		else if(document.documentElement && document.documentElement.clientHeight)
+			h = document.documentElement.clientHeight;
+		else if(document.body) 
+			h = document.body.clientHeight;
+		return h;
+	}
+
+	function scrollToAnchor(tag){
+		var aTag = $("a[name='"+ tag +"']");
+		$('html,body').animate({scrollTop: aTag.offset().top},'slow');
+	}
+
+</script>
+
+
+<div id="screen-filler">
+
+	<div class="center ">
+		<h1 class = "fade1">Paul Li</h1>
+		<p class = "subtitle fade2"> Software Developer</p>
+		<a class=" fade3 btn btn-primary outline btn-lg" href="#" role="button">Learn more</a>
+	</div>
+
+</div>
+
+
+
+
+<div class="container">
+
+	<div class="panel-content">
+		<a name="about_me"></a>
+		<h1>About me!</h1>
+		<hr>
+		<p>My name is Paul Li, I'm 19 years old first year and a Computer Science student at University of Western Ontario. </p>
+
+		<p>I have a passion for programming. Some languages I know are Python, Java, C++ and HTML/CSS. I'm also familiar with using Bash, Android Studio and Photoshop. Ever since I was in elementary I always loved self-teaching myself new things. This is where I got to self teach myself C++, HTML/CSS and many more things online. I still have a lot I wish to learn but, I have a strong knowledge of the fundementals of programing and skills in mathematics. </p>
+
+		<p>My hobbies have always jumped around as I love trying and getting into new things. Recently, I have been into bouldering, billiards and cooking. However, I have always loved gaming as a past time such as Hearthstone. During my first year in university I was in the Western Billiards Society, Chinese Students' Association and Western Climbing Club. I also been to a few hackathons during my first year.   </p>
+
+	</div>
+</div>
+
+<span class = "clearfix"></span>
+
+<div class = "panel-content-black dropshadow">
+	<div class="container">
+		<div class="panel-content">
+			<a name="portfolio"></a>
+			<h1>Portfolio</h1>
+			<hr>
+			<div class="panel-portfolio">
+				<div class="row">
+					<div class="col-md-4">
+						<div class = "lol">
+							<img class = "lol1" alt="Rails" src="/assets/audi.jpg" />
+							<div class = "lol2">Hello</div>
+						</div>
+					</div>
+					<div class="col-md-4"><img alt="Rails" src="/assets/audi.jpg" /></div>
+					<div class="col-md-4"><img alt="Rails" src="/assets/audi.jpg" /></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<span class = "clearfix"></span>
+
+<div class="container">
+	<div class="panel-content">
+		<a name="contact"></a>
+		<h1>Contact</h1>
+		<hr>
+		<div class ="center-h">
+			<a href="https://www.linkedin.com/in/illuap">
+				<img border="0" alt="My Linked In" src="/assets/linked-in2.png" width="120"  height="120">
+			</a>
+
+			<a href="https://github.com/illuap/">
+				<img border="0" alt="My Github" src="/assets/email.png" width="120" height="120">
+			</a>
+
+			<a href="https://github.com/illuap/">
+				<img border="0" alt="My Github" src="/assets/github-og2.png" width="120" height="120">
+			</a>
+
+		</div>
+
+	</div>
+
+</div>
+<span class = "clearfix"></span>
+
+<%= render :partial => 'layouts/footer'%>
