@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
 
+  get 'uploads/new'
+
+  get 'uploads/create'
+
+  get 'uploads/index'
+
   get 'index' => 'home#index'
   get 'about' => 'home#about'
   get 'gallery' => 'home#gallery'
@@ -9,7 +15,7 @@ Rails.application.routes.draw do
   get 'front_page/index'
   get 'todos/index'
 
-
+resources :uploads
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

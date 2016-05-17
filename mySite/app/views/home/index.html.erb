@@ -23,13 +23,23 @@
 		$(".lol").mouseout(function(){
 			$(".lol2").slideToggle("slow");
 		});
-		
+		$(function() {
+		  $('a[href*="#"]:not([href="#"])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html, body').animate({
+		          scrollTop: target.offset().top
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		  });
+		});
 	});
 
-	$('.btn').click(function(){
-		scrollToAnchor(about_me);
-		return false;
-	});
+
 
 	function getViewportHeight() {
 		var h = 0;
@@ -42,17 +52,17 @@
 		return h;
 	}
 
-	function scrollToAnchor(tag){
-		var aTag = $("a[name='"+ tag +"']");
+	function scrollToAnchor(aid){
+		var aTag = $("a[name='"+ aid +"']");
 		$('html,body').animate({scrollTop: aTag.offset().top},'slow');
 	}
 
 </script>
 
 
-<div id="screen-filler">
+<div id="screen-filler" name="home">
 
-	<div class="center ">
+	<div class="center">
 		<h1 class = "fade1">Paul Li</h1>
 		<p class = "subtitle fade2"> Software Developer</p>
 		<a class=" fade3 btn btn-primary outline btn-lg" href="#" role="button">Learn more</a>
