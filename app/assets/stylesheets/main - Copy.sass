@@ -1,0 +1,393 @@
+// styles/home.sass
+// styles/posts.scss
+// styles/scaffolds.scss
+// styles/todos.scss
+
+$footer-bg-color: #333
+$footer-height: 90px
+$footer-height-mobile: 120px
+$primary-btn-color: #fff
+
+$backdrop-main-color: #E2F8FB
+$backdrop-color: #f0f0f0
+//$backdrop-color: darken( $backdrop-main-color, 5% )
+$h1-color: #fff
+$navbar-height: 50px
+
+$header-block-height: 600px
+$logo-link-size: 300px
+
+
+
+
+html,
+body
+	margin: 0
+	padding: 0
+	height: 100%
+	background-color: $backdrop-color
+
+
+
+h1,h2,h3,h4,h5,h6
+	color: white
+
+
+h1
+	font-size: 4.5em
+	font-weight: bold
+	color: $h1-color
+	padding: 0
+	margin: 0
+
+
+.centered 
+	position: absolute
+	left: 50%
+	margin-left: -100px
+	line-height: 10em
+
+.img-bg
+	background: url(city.jpg) no-repeat center center fixed
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+	position: fixed
+	top: 0
+	left: 0
+	min-height: 100%
+	min-width: 100%
+.mainImage
+	max-width: 900px
+	width: auto
+	height: 300px
+
+.footer-container 
+	background-color: $footer-bg-color
+	margin: 0 auto
+	min-height: $footer-height
+	width: 100%
+	position: absolute
+	bottom: 0
+	padding-top: 5px
+	vertical-align: bottom
+
+	img
+		margin: 5px
+.footer-container2 
+	display: inline-block
+	width: 100%
+	min-height: $footer-height
+	background-color: $footer-bg-color
+	
+	img
+		margin: 5px
+
+.front-page-content
+	color: #fff
+	display: block
+	max-width: 300px
+.front-page-button
+	display: block
+
+.navbar-default 
+	background-color: rgba(0,0,0,1)
+	border-color: rgba(0,0,0,0)
+	margin: 0
+	
+	a
+		color: rgba(255,255,0,0.8)
+
+
+@media (min-width: 768px) 
+	.navbar .navbar-nav 
+		display: inline-block
+		float: none
+		vertical-align: top
+	.navbar-default 
+		background-color: rgba(0,0,0,0)
+		
+.navbar .navbar-collapse 
+	text-align: center
+
+
+
+.jumbotron
+	text-align: center
+	max-width: 100% 
+	max-height: 300px	
+	background-color: rgba(0,0,0,0)
+	color: white
+
+.absolute-center 
+	margin: auto
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+.spacer
+	height: 800px
+	display: inline-block
+.spacer-sm
+	height: 400px
+	display: inline-block
+	float: left
+
+// editing_bootstrap_button
+.btn 
+	padding: 14px 24px
+	border: 0 none
+	font-weight: 700
+	letter-spacing: 1px
+	text-transform: uppercase
+
+.btn:focus, .btn:active:focus, .btn.active:focus 
+	outline: 0 none
+
+ 
+.btn-primary 
+	background: #0099cc
+	color: #ffffff
+
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary 
+	background: #33a6cc
+
+ 
+.btn-primary:active, .btn-primary.active 
+	background: #007299
+	box-shadow: none
+
+	
+// editing_bootstrap_button to ouline 
+.btn.outline 
+	background: none
+	padding: 12px 22px
+.btn-primary.outline 
+	border: 2px solid $primary-btn-color
+	color: $primary-btn-color
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary
+	color: #33a6cc
+	border-color: #33a6cc
+
+.btn-primary.outline:active, .btn-primary.outline.active 
+	border-color: #007299
+	color: #007299
+	box-shadow: none
+
+.contact
+	color: white
+	text-align: center
+	h1
+		margin: 50px 0
+	h2
+		font-weight: bold
+		margin-top: 20px 
+	hr
+		border: 2px solid white
+		margin: 60px 0
+
+.container
+	max-width: 9000px		
+	
+
+.content
+	background-color: rgba(0,0,0,0)
+	width: 100%
+	min-height: 800px
+	padding-bottom: 90px
+
+.backdrop-main
+	background-color: $backdrop-main-color
+	width: 100%
+	height: 30em
+	bottom: 0
+	display: block
+	border-bottom: 5px solid darken( $backdrop-main-color, 7% )
+.backdrop
+	background-color: $backdrop-color 
+	width: 100%
+	height: 100%
+	display: block
+	padding: 0
+
+.dimScreen
+	position: relative
+	padding: 0
+	margin: 0
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: rgba(0,0,0,0.5)
+
+
+
+.panel
+	margin-top: 20px
+
+.clearfix 
+	overflow: auto
+	zoom: 1
+
+
+
+
+
+.navbar-default .navbar-brand 
+	color: rgba(255, 255, 255, 1)
+
+.navbar-default 
+	font-size: 17px
+	background-color: rgba(0, 0, 0, 0.1)
+	border-width: 0px
+	border-radius: 0px
+	height: $navbar-height
+
+.navbar-default .navbar-nav>li>a 
+	color: rgba(255, 255, 255, 1)
+	background-color: rgba(248, 248, 248, 0)
+	text-shadow: 1px 1px 2px #444
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus 
+	color: rgba(51, 51, 51, 1)
+	background-color: rgba(248, 248, 248, 0)
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus 
+	color: rgba(85, 85, 85, 1)
+	background-color: rgba(231, 231, 231, 1)
+
+.navbar-default .navbar-toggle 
+	border-color: #ddd
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus 
+	background-color: #ddd
+
+.navbar-default .navbar-toggle .icon-bar 
+	background-color: #888
+
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar 
+	background-color: #ffffff
+
+@media (max-width: 768px) 
+	.content
+		padding-bottom: 185px
+	.footer-container 
+		.nav-pills
+			width: 100%
+
+
+.main
+	margin: 0
+	padding: 0
+	width: 100%
+	position: relative
+	min-height: 100%
+
+.header-block
+	width: 100%
+	height: $header-block-height
+	background-color: white
+	background: url("audi.jpg") center center no-repeat
+	background-size: cover
+	display: block
+	text-align: center
+	h1
+		font-size: 5em
+		line-height: $header-block-height
+		margin: 0
+		padding: 0
+		color: #fff
+		font-style: light
+		font-stretch: expanded
+		font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif
+
+
+.main-block
+	width: 100%
+	height: 200px
+	background-color: white
+	display: block
+
+
+.panel-img
+	position: relative
+	width: 400px
+	height: 400px
+	overflow: hidden
+
+	img
+		position: absolute
+		right: 0
+		bottom: 0
+		-o-object-fit: contain
+.panel-body
+	padding: 0	
+
+.thumbnail
+	display: inline-block
+	float: left
+	height: 400px
+	width: 400px
+	margin: 0
+	padding: 1px
+
+	img
+		border-radius: 2px
+
+.panel-content
+	display: inline-block
+	float: left
+	margin: 20px
+	padding: 3em 0.5em
+	p
+		text-align: center
+		font-size: 1.8em
+		text-align: left
+	h1
+		color: black
+
+.logo-link
+	text-align: center
+	img 
+		width: $logo-link-size
+		padding: 2px
+		padding-bottom: 2em
+
+.logo-container		
+	width: $logo-link-size
+	display: block
+	font-size: 1.5em
+	margin-left: auto
+	margin-right: auto
+
+.left
+	display: inline-block
+	float: right
+
+.copyright
+	font-size: 1em
+	color: white
+
+#screen-filler
+	background: url(city.jpg) no-repeat center center fixed
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+	box-shadow: 0px 5px 5px #888888
+
+	
+
+.center
+	position: relative
+	top: 50%
+	transform: translateY(-50%)
+	text-align: center

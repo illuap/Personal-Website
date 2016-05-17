@@ -1,0 +1,320 @@
+// styles/home.sass
+// styles/posts.scss
+// styles/scaffolds.scss
+// styles/todos.scss
+
+$footer-bg-color: #333
+$footer-height: 90px
+$footer-height-mobile: 120px
+$primary-btn-color: #fff
+
+$backdrop-main-color: #E2F8FB
+$backdrop-color: #f0f0f0
+//$backdrop-color: darken( $backdrop-main-color, 5% )
+$h1-color: #fff
+$navbar-height: 50px
+
+$header-block-height: 600px
+$logo-link-size: 300px
+
+
+
+
+html,
+body
+	margin: 0
+	padding: 0
+	height: 100%
+	background-color: $backdrop-color
+
+
+
+h1,h2,h3,h4,h5,h6
+	color: white
+	font-family: Georgia, Times, "Times New Roman", serif
+
+
+h1
+	font-size: 4.5em
+	font-weight: bold
+	color: $h1-color
+	padding: 0
+	margin: 0
+	text-align: center
+
+
+
+hr 
+	border: 0
+	clear: both
+	display: block
+	width: 96%
+	background-color: #DDD
+	height: 1px
+
+
+.footer-container 
+	background-color: $footer-bg-color
+	margin: 0 auto
+	min-height: $footer-height
+	width: 100%
+	position: absolute
+	bottom: 0
+	padding-top: 5px
+	vertical-align: bottom
+
+	img
+		margin: 5px
+
+.footer-container2 
+	display: inline-block
+	width: 100%
+	min-height: $footer-height
+	background-color: $footer-bg-color
+
+	img
+		margin: 5px
+
+.front-page-button
+	display: block
+
+
+
+// ----------------------------
+// ----------------------------
+// ----------------------------
+.navbar
+	opacity: 0
+
+
+
+.navbar-default 
+	background-color: rgba(0,0,0,1)
+	border-color: rgba(0,0,0,0)
+	margin: 0
+	
+	a
+		color: rgba(255,255,0,0.8)
+
+
+@media (min-width: 768px) 
+	.navbar .navbar-nav 
+		display: inline-block
+		float: none
+		vertical-align: top
+	.navbar-default 
+		background-color: rgba(0,0,0,0)
+		
+.navbar .navbar-collapse 
+	text-align: center
+
+
+// ----------------------------
+
+
+// ----------------------------
+// editing_bootstrap_button
+// ----------------------------
+.btn 
+	padding: 14px 24px
+	border: 0 none
+	font-weight: 700
+	letter-spacing: 1px
+	text-transform: uppercase
+
+.btn:focus, .btn:active:focus, .btn.active:focus 
+	outline: 0 none
+
+ 
+.btn-primary 
+	background: #0099cc
+	color: #ffffff
+
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary 
+	background: #33a6cc
+
+ 
+.btn-primary:active, .btn-primary.active 
+	background: #007299
+	box-shadow: none
+
+// ----------------------------
+// editing_bootstrap_button to ouline 
+// ----------------------------
+.btn.outline 
+	background: none
+	padding: 12px 22px
+.btn-primary.outline 
+	border: 2px solid $primary-btn-color
+	color: $primary-btn-color
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary
+	color: #33a6cc
+	border-color: #33a6cc
+
+.btn-primary.outline:active, .btn-primary.outline.active 
+	border-color: #007299
+	color: #007299
+	box-shadow: none
+// ----------------------------
+// ----------------------------
+
+.container
+	max-width: 9000px		
+
+.clearfix 
+	overflow: auto
+	zoom: 1
+
+// ----------------------------
+// ----------------------------
+
+
+
+// ----------------------------
+// Nav
+// ----------------------------
+.navbar-default .navbar-brand 
+	color: rgba(255, 255, 255, 1)
+
+.navbar-default 
+	font-size: 17px
+	background-color: rgba(0, 0, 0, 0.1)
+	border-width: 0px
+	border-radius: 0px
+	height: $navbar-height
+
+.navbar-default .navbar-nav>li>a 
+	color: rgba(255, 255, 255, 1)
+	background-color: rgba(248, 248, 248, 0)
+	text-shadow: 1px 1px 2px #444
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus 
+	color: rgba(51, 51, 51, 1)
+	background-color: rgba(248, 248, 248, 0)
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus 
+	color: rgba(85, 85, 85, 1)
+	background-color: rgba(231, 231, 231, 1)
+
+.navbar-default .navbar-toggle 
+	border-color: #ddd
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus 
+	background-color: #ddd
+
+.navbar-default .navbar-toggle .icon-bar 
+	background-color: #888
+
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar 
+	background-color: #ffffff
+
+@media (max-width: 768px) 
+	.content
+		padding-bottom: 185px
+	.footer-container 
+		.nav-pills
+			width: 100%
+// ----------------------------
+// ----------------------------
+// ----------------------------
+
+
+
+.main
+	margin: 0
+	padding: 0
+	width: 100%
+	position: relative
+	min-height: 100%
+
+.panel-content
+	display: inline-block
+	float: left
+	margin: 20px 0
+	padding: 3em 0.5em
+	width: 100%
+	p
+		text-align: center
+		font-size: 1.8em
+		text-align: left
+	h1
+		color: black
+
+.panel-content-black
+	background-color: #ccc
+
+.panel-portfolio
+	display: inline-block
+	margin: auto
+	img 
+		width: 100%
+		height: 100%
+		padding: 0
+
+.right
+	display: inline-block
+	float: right
+
+.copyright
+	font-size: 1em
+	color: white
+
+#screen-filler
+	background: url(city.jpg) no-repeat center center fixed
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+	box-shadow: 0px 5px 5px #888888
+
+.subtitle
+	color: rgba(255,255,255,0.8)
+	font-size: 1.5em
+
+	
+
+
+.center-h
+	text-align: center
+
+.center
+	position: relative
+	top: 50%
+	transform: translateY(-50%)
+	text-align: center
+
+
+.dropshadow
+	box-shadow: 0px 0px 10px #888888
+
+.fade1,.fade2,.fade3
+	opacity: 0
+
+.lol
+	height: 280px 
+	width: 100%
+
+.lol1
+	width: 100%
+	height: 100%
+
+
+.lol2
+	background-color: red
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	opacity: 1
+	margin: 0
+	padding: 0
+
+.col-md-4
+	padding: 0
